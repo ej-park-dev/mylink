@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 48px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #252640;
+  background: linear-gradient(160deg, #f7f7ff, #eeedf9);
+}
+
+main {
+  width: 100%;
+  max-width: 420px;
+  margin: auto 0;
+  padding: 32px 0;
+  text-align: center;
+}
+
+.profile-image {
+  width: 112px;
+  height: 112px;
+  margin: 0 auto 20px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  background: #dedff5;
+  box-shadow: 0 8px 24px rgb(91 95 199 / 12%);
+}
+
+.profile-image svg {
+  width: 64px;
+  height: 64px;
+  color: #5B5FC7;
+}
+
+/* 프로필 사진 사용 시 원형 영역 안에 img 태그를 넣으세요. */
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  letter-spacing: -0.04em;
+}
+
+.bio {
+  margin: 0 0 32px;
+  color: #64657b;
+  font-size: 15px;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+.links {
+  display: grid;
+  gap: 14px;
+}
+
+.link-card {
+  min-height: 64px;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(255 255 255 / 15%);
+  border-radius: 16px;
+  color: #fff;
+  background: #5B5FC7;
+  box-shadow: 0 6px 16px rgb(91 95 199 / 18%);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 180ms ease, background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+@media (hover: hover) {
+  .link-card:hover {
+    transform: translateY(-3px);
+    background: #4c50b3;
+    box-shadow: 0 10px 22px rgb(91 95 199 / 26%);
+  }
+}
+
+.link-card:focus-visible {
+  outline: 3px solid #333685;
+  outline-offset: 5px;
+}
+
+.link-card:active {
+  transform: scale(0.98);
+}
+
+footer {
+  padding-top: 32px;
+  color: #72738a;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 28px;
+  }
+
+  main {
+    padding: 24px 0;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link-card {
+    transition: none;
+  }
+
+  .link-card:hover,
+  .link-card:active {
+    transform: none;
+  }
+}
